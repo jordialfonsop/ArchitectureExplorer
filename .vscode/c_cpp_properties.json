@@ -1,14 +1,19 @@
 {
-	"configurations": [
-		{
-			"name": "ArchitectureExplorerEditor Editor Win64 Development (ArchitectureExplorer)",
-			"intelliSenseMode": "msvc-x64",
-			"compileCommands": "G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_ArchitectureExplorer.json"
-		},
-		{
-			"name": "Win32",
-			"intelliSenseMode": "msvc-x64",
-			"compileCommands": "G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default.json"
-		}
-	]
+    "configurations": [
+        {
+            "name": "ArchitectureExplorerEditor Editor Win64 Development (ArchitectureExplorer)",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_ArchitectureExplorer.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Win32",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
 }
