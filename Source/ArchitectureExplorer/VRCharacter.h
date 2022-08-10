@@ -31,4 +31,7 @@ private:
 	void MoveUp(float AxisValue);
 	void MoveRight(float AxisValue);
 
+	UPROPERTY()
+	class UCameraComponent* Camera;
+
 };
