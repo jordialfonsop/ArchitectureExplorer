@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"name": "ArchitectureExplorerEditor Editor Win64 Development (ArchitectureExplorer)",
+			"intelliSenseMode": "msvc-x64",
+			"compileCommands": "G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_ArchitectureExplorer.json"
+		},
+		{
+			"name": "Win32",
+			"intelliSenseMode": "msvc-x64",
+			"compileCommands": "G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default.json"
+		}
+	]
+}

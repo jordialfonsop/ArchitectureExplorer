@@ -1,0 +1,27 @@
+[
+	{
+		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\ArchitectureExplorer.Build.cs",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default\\ArchitectureExplorer.211.rsp\"",
+		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\ArchitectureExplorer.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default\\ArchitectureExplorer.211.rsp\"",
+		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\ArchitectureExplorer.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default\\ArchitectureExplorer.211.rsp\"",
+		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\ArchitectureExplorerGameModeBase.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default\\ArchitectureExplorer.211.rsp\"",
+		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\ArchitectureExplorerGameModeBase.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_Default\\ArchitectureExplorer.211.rsp\"",
+		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
+	}
+]

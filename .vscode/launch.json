@@ -1,0 +1,152 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch ArchitectureExplorer (Debug)",
+			"request": "launch",
+			"program": "G:\\Unreal Projects\\ArchitectureExplorer\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+			"preLaunchTask": "ArchitectureExplorer Win64 Debug Build",
+			"args": [
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch ArchitectureExplorer (DebugGame)",
+			"request": "launch",
+			"program": "G:\\Unreal Projects\\ArchitectureExplorer\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+			"preLaunchTask": "ArchitectureExplorer Win64 DebugGame Build",
+			"args": [
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch ArchitectureExplorer (Development)",
+			"request": "launch",
+			"program": "G:\\Unreal Projects\\ArchitectureExplorer\\Binaries\\Win64\\UnrealGame.exe",
+			"preLaunchTask": "ArchitectureExplorer Win64 Development Build",
+			"args": [
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch ArchitectureExplorer (Test)",
+			"request": "launch",
+			"program": "G:\\Unreal Projects\\ArchitectureExplorer\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+			"preLaunchTask": "ArchitectureExplorer Win64 Test Build",
+			"args": [
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch ArchitectureExplorer (Shipping)",
+			"request": "launch",
+			"program": "G:\\Unreal Projects\\ArchitectureExplorer\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+			"preLaunchTask": "ArchitectureExplorer Win64 Shipping Build",
+			"args": [
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch ArchitectureExplorerEditor (Debug)",
+			"request": "launch",
+			"program": "F:\\Unreal Engine\\UE_5.0\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+			"preLaunchTask": "ArchitectureExplorerEditor Win64 Debug Build",
+			"args": [
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject"
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch ArchitectureExplorerEditor (DebugGame)",
+			"request": "launch",
+			"program": "F:\\Unreal Engine\\UE_5.0\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+			"preLaunchTask": "ArchitectureExplorerEditor Win64 DebugGame Build",
+			"args": [
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject"
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch ArchitectureExplorerEditor (Development)",
+			"request": "launch",
+			"program": "F:\\Unreal Engine\\UE_5.0\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+			"preLaunchTask": "ArchitectureExplorerEditor Win64 Development Build",
+			"args": [
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject"
+			],
+			"cwd": "F:\\Unreal Engine\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "F:\\Unreal Engine\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "F:\\Unreal Engine\\UE_5.0\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-game",
+				"-engine"
+			],
+			"console": "externalTerminal",
+			"stopAtEntry": false,
+			"cwd": "F:\\Unreal Engine\\UE_5.0"
+		}
+	]
+}

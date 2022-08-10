@@ -1,0 +1,707 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "ArchitectureExplorer Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Test",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Test",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Test",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Shipping",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Shipping",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"Win64",
+				"Shipping",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer HoloLens Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer HoloLens DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer HoloLens Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Test",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Test",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer HoloLens Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Test",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Shipping",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Shipping",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorer HoloLens Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorer HoloLens Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorer",
+				"HoloLens",
+				"Shipping",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorerEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"Debug",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorerEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"DebugGame",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ArchitectureExplorerEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		},
+		{
+			"label": "ArchitectureExplorerEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ArchitectureExplorerEditor",
+				"Win64",
+				"Development",
+				"G:\\Unreal Projects\\ArchitectureExplorer\\ArchitectureExplorer.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Unreal Engine\\UE_5.0"
+			}
+		}
+	]
+}
