@@ -42,6 +42,12 @@ private:
 	UPROPERTY(EditAnywhere)
 	float DestinationMarkerRange = 1000.0f;
 
+	UPROPERTY(EditAnywhere)
+	float FadeTime = 2.0f;
+
 	void UpdateDestinationMarker();
+
+	void BeginTeleport();
+	void FinishTeleport();
 
 };
