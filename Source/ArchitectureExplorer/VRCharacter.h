@@ -35,6 +35,13 @@ private:
 	class UCameraComponent* Camera;
 	UPROPERTY()
 	class USceneComponent* VRRoot;
+	UPROPERTY()
+	class UPostProcessComponent* Blinker;
+	UPROPERTY()
+	class UMaterialInstanceDynamic* BlinkerMaterial;
+
+	UPROPERTY(EditAnywhere)
+	class UMaterialInterface* BlinkerMaterialBase;
 
 	UPROPERTY(VisibleAnywhere)
 	class UStaticMeshComponent* DestinationMarker;
@@ -44,6 +51,9 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float FadeTime = 1.0f;
+
+	UPROPERTY(EditAnywhere)
+	float RadiusValue = 0.6f;
 
 	UPROPERTY(EditAnywhere)
 	FVector TeleportProjectionExtent = FVector(100,100,100);

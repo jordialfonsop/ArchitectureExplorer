@@ -6,8 +6,10 @@
 #include "Camera/PlayerCameraManager.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/PostProcessComponent.h"
 #include "NavigationSystem.h"
 #include "TimerManager.h"
+#include "Materials/MaterialInstanceDynamic.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -24,6 +26,10 @@ AVRCharacter::AVRCharacter()
 
 	DestinationMarker = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Destination Marker"));
 	DestinationMarker->SetupAttachment(GetRootComponent());
+
+	Blinker = CreateDefaultSubobject<UPostProcessComponent>(TEXT("Blinker"));
+	Blinker->SetupAttachment(GetRootComponent());
+
 	
 
 }
@@ -32,6 +38,16 @@ AVRCharacter::AVRCharacter()
 void AVRCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	if (BlinkerMaterialBase != nullptr){
+
+		BlinkerMaterial = UMaterialInstanceDynamic::Create(BlinkerMaterialBase,this);
+		UE_LOG(LogTemp,Warning,TEXT("BRUH"));
+		Blinker->AddOrUpdateBlendable(BlinkerMaterial);
+
+		BlinkerMaterial->SetScalarParameterValue(TEXT("Radius"), RadiusValue);
+
+	}
+	
 	
 }
 
@@ -46,6 +62,8 @@ void AVRCharacter::Tick(float DeltaTime)
 	VRRoot->AddWorldOffset(-NewCameraOffset);
 
 	UpdateDestinationMarker();
+
+	
 }
 
 // Called to bind functionality to input
@@ -130,7 +148,7 @@ void AVRCharacter::FinishTeleport()
 
 	//Fade Back In
 	StartFade(1,0);
-	
+
 }
 
 void AVRCharacter::StartFade(float FromAlpha, float ToAlpha)
