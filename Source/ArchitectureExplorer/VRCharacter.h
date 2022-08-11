@@ -31,9 +31,17 @@ private:
 	void MoveUp(float AxisValue);
 	void MoveRight(float AxisValue);
 
-
+	UPROPERTY()
 	class UCameraComponent* Camera;
-
+	UPROPERTY()
 	class USceneComponent* VRRoot;
+
+	UPROPERTY(VisibleAnywhere)
+	class UStaticMeshComponent* DestinationMarker;
+
+	UPROPERTY(EditAnywhere)
+	float DestinationMarkerRange = 1000.0f;
+
+	void UpdateDestinationMarker();
 
 };
