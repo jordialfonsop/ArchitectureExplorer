@@ -6,6 +6,7 @@
 #include "Camera/PlayerCameraManager.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "NavigationSystem.h"
 #include "TimerManager.h"
 
 // Sets default values
@@ -69,7 +70,7 @@ void AVRCharacter::MoveRight(float AxisValue)
 	AddMovementInput(Camera->GetRightVector() * AxisValue);
 }
 
-void AVRCharacter::UpdateDestinationMarker()
+bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
 {
 	FHitResult Hit;
 	FVector Start = Camera->GetComponentLocation();
@@ -77,9 +78,32 @@ void AVRCharacter::UpdateDestinationMarker()
 
 	bool bHit = GetWorld()->LineTraceSingleByChannel(Hit,Start,End,ECollisionChannel::ECC_Visibility);
 
-	if (bHit){
- 		DestinationMarker->SetWorldLocation(Hit.Location);
+	if (!bHit){
+		return false;
+	}
+
+	FNavLocation NavLocation;
+	bool bNavMesh = UNavigationSystemV1::GetCurrent(GetWorld())->ProjectPointToNavigation(Hit.Location,NavLocation, TeleportProjectionExtent);
+
+	if (!bNavMesh){
+		return false;
+	}
+
+	OutLocation = NavLocation.Location;
+
+	return true;
+
+}
+
+void AVRCharacter::UpdateDestinationMarker()
+{
+	FVector Location;
+	bool result = FindTeleportDestination(Location);
+	if (result){
+		
+		DestinationMarker->SetWorldLocation(Location);
 		DestinationMarker->SetHiddenInGame(false);
+	
 	}else{
 		DestinationMarker->SetHiddenInGame(true);
 	}
@@ -87,33 +111,36 @@ void AVRCharacter::UpdateDestinationMarker()
 
 void AVRCharacter::BeginTeleport()
 {
-	//Get Player Controller
-	APlayerController* Player = Cast<APlayerController>(GetController());
-	
-	if (Player != nullptr){
-		//Fade Camera to Black
-		Player->PlayerCameraManager->StartCameraFade(0,1,FadeTime,FLinearColor::Black,false,true);
 
-		//Set Timer for FadeTime seconds
-		FTimerHandle FadeTimer;
-		GetWorldTimerManager().SetTimer(FadeTimer,this,&AVRCharacter::FinishTeleport,FadeTime);
-	}
+	//Fade Camera to Black
+	StartFade(0,1);
+
+	//Set Timer for FadeTime seconds
+	FTimerHandle FadeTimer;
+	GetWorldTimerManager().SetTimer(FadeTimer,this,&AVRCharacter::FinishTeleport,FadeTime);
 
 
 }
 
 void AVRCharacter::FinishTeleport()
 {
+	
+	//Teleport to Location
+	SetActorLocation(DestinationMarker->GetComponentLocation() + GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+
+	//Fade Back In
+	StartFade(1,0);
+	
+}
+
+void AVRCharacter::StartFade(float FromAlpha, float ToAlpha)
+{
+	//Get Player Controller
 	APlayerController* Player = Cast<APlayerController>(GetController());
 	
 	if (Player != nullptr){
-
-		//Teleport to Location
-		SetActorLocation(DestinationMarker->GetComponentLocation() + GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
-
-		//Fade Back In
-		Player->PlayerCameraManager->StartCameraFade(1,0,FadeTime,FLinearColor::Black,false,true);
+		Player->PlayerCameraManager->StartCameraFade(FromAlpha,ToAlpha,FadeTime,FLinearColor::Black,false,true);
 	}
-	
+
 }
 

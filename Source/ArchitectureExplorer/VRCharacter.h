@@ -43,11 +43,17 @@ private:
 	float DestinationMarkerRange = 1000.0f;
 
 	UPROPERTY(EditAnywhere)
-	float FadeTime = 2.0f;
+	float FadeTime = 1.0f;
 
+	UPROPERTY(EditAnywhere)
+	FVector TeleportProjectionExtent = FVector(100,100,100);
+
+	bool FindTeleportDestination(FVector& OutLocation);
 	void UpdateDestinationMarker();
 
 	void BeginTeleport();
 	void FinishTeleport();
+
+	void StartFade(float FromAlpha, float ToAlpha);
 
 };
