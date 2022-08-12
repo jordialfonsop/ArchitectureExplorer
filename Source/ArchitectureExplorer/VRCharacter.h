@@ -39,11 +39,20 @@ private:
 	class UMotionControllerComponent* RightController;
 	UPROPERTY()
 	class USceneComponent* VRRoot;
+
+	UPROPERTY(VisibleAnywhere)
+	class USplineComponent* TeleportPath;
+	UPROPERTY(EditDefaultsOnly)
+	class UStaticMesh* TeleportMesh;
+	UPROPERTY(EditDefaultsOnly)
+	class UMaterialInterface* TeleportMaterial;
+	UPROPERTY()
+	TArray<class UStaticMeshComponent*> TeleportPathMeshPool;
+
 	UPROPERTY()
 	class UPostProcessComponent* Blinker;
 	UPROPERTY()
 	class UMaterialInstanceDynamic* BlinkerMaterial;
-
 	UPROPERTY(EditAnywhere)
 	class UMaterialInterface* BlinkerMaterialBase;
 
@@ -56,7 +65,7 @@ private:
 	FVector DestinationPoint;
 
 	UPROPERTY(EditAnywhere)
-	float DestinationMarkerRange = 1000.0f;
+	float DestinationMarkerSpeed = 1000.0f;
 
 	UPROPERTY(EditAnywhere)
 	float FadeTime = 1.0f;
@@ -67,9 +76,11 @@ private:
 	UPROPERTY(EditAnywhere)
 	FVector TeleportProjectionExtent = FVector(100,100,100);
 
-	bool FindTeleportDestination(FVector& OutLocation);
+	bool FindTeleportDestination(TArray<FVector> &OutPath, FVector& OutLocation);
 	void UpdateDestinationMarker();
+	void UpdateSpline(const TArray<FVector> &Path);
 	void UpdateBlinkers();
+	void DrawTeleportPath(const TArray<FVector> &Path);
 
 	void BeginTeleport();
 	void FinishTeleport();
