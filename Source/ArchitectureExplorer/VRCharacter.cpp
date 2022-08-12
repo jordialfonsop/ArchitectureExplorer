@@ -10,6 +10,7 @@
 #include "NavigationSystem.h"
 #include "TimerManager.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "MotionControllerComponent.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -23,6 +24,18 @@ AVRCharacter::AVRCharacter()
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(VRRoot);
+
+	LeftController = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("Left Controller"));
+	LeftController->SetupAttachment(VRRoot);
+	LeftController->SetTrackingSource(EControllerHand::Left);
+	LeftController->SetDisplayModelSource(TEXT("OculusHMD"));
+	LeftController->SetShowDeviceModel(true);
+
+	RightController = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("Right Controller"));
+	RightController->SetupAttachment(VRRoot);
+	RightController->SetTrackingSource(EControllerHand::Right);
+	RightController->SetDisplayModelSource(TEXT("OculusHMD"));
+	RightController->SetShowDeviceModel(true);
 
 	DestinationMarker = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Destination Marker"));
 	DestinationMarker->SetupAttachment(GetRootComponent());
@@ -41,10 +54,10 @@ void AVRCharacter::BeginPlay()
 	if (BlinkerMaterialBase != nullptr){
 
 		BlinkerMaterial = UMaterialInstanceDynamic::Create(BlinkerMaterialBase,this);
-		UE_LOG(LogTemp,Warning,TEXT("BRUH"));
-		Blinker->AddOrUpdateBlendable(BlinkerMaterial);
 
 		BlinkerMaterial->SetScalarParameterValue(TEXT("Radius"), RadiusValue);
+
+		Blinker->AddOrUpdateBlendable(BlinkerMaterial);
 
 	}
 	
@@ -63,6 +76,7 @@ void AVRCharacter::Tick(float DeltaTime)
 
 	UpdateDestinationMarker();
 
+	UpdateBlinkers();
 	
 }
 
@@ -91,8 +105,8 @@ void AVRCharacter::MoveRight(float AxisValue)
 bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
 {
 	FHitResult Hit;
-	FVector Start = Camera->GetComponentLocation();
-	FVector End = Start + Camera->GetForwardVector() * DestinationMarkerRange;
+	FVector Start = RightController->GetComponentLocation();
+	FVector End = Start + RightController->GetForwardVector().RotateAngleAxis(30,RightController->GetRightVector()) * DestinationMarkerRange;
 
 	bool bHit = GetWorld()->LineTraceSingleByChannel(Hit,Start,End,ECollisionChannel::ECC_Visibility);
 
@@ -127,16 +141,27 @@ void AVRCharacter::UpdateDestinationMarker()
 	}
 }
 
+void AVRCharacter::UpdateBlinkers()
+{
+	if (RadiusVelocity == nullptr){
+		return;
+	}
+
+	FVector VelocityVector = this->GetVelocity();
+	float VelocityValue = VelocityVector.Size();
+
+	BlinkerMaterial->SetScalarParameterValue(TEXT("Radius"), RadiusVelocity->GetFloatValue(VelocityValue));
+}
+
 void AVRCharacter::BeginTeleport()
 {
-
-	//Fade Camera to Black
-	StartFade(0,1);
-
+	DestinationPoint = DestinationMarker->GetComponentLocation();
 	//Set Timer for FadeTime seconds
 	FTimerHandle FadeTimer;
 	GetWorldTimerManager().SetTimer(FadeTimer,this,&AVRCharacter::FinishTeleport,FadeTime);
 
+	//Fade Camera to Black
+	StartFade(0,1);
 
 }
 
@@ -144,7 +169,7 @@ void AVRCharacter::FinishTeleport()
 {
 	
 	//Teleport to Location
-	SetActorLocation(DestinationMarker->GetComponentLocation() + GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+	SetActorLocation(DestinationPoint + GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
 
 	//Fade Back In
 	StartFade(1,0);

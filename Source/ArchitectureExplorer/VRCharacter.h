@@ -34,6 +34,10 @@ private:
 	UPROPERTY()
 	class UCameraComponent* Camera;
 	UPROPERTY()
+	class UMotionControllerComponent* LeftController;
+	UPROPERTY()
+	class UMotionControllerComponent* RightController;
+	UPROPERTY()
 	class USceneComponent* VRRoot;
 	UPROPERTY()
 	class UPostProcessComponent* Blinker;
@@ -43,8 +47,13 @@ private:
 	UPROPERTY(EditAnywhere)
 	class UMaterialInterface* BlinkerMaterialBase;
 
+	UPROPERTY(EditAnywhere)
+	class UCurveFloat* RadiusVelocity;
+
 	UPROPERTY(VisibleAnywhere)
 	class UStaticMeshComponent* DestinationMarker;
+
+	FVector DestinationPoint;
 
 	UPROPERTY(EditAnywhere)
 	float DestinationMarkerRange = 1000.0f;
@@ -60,6 +69,7 @@ private:
 
 	bool FindTeleportDestination(FVector& OutLocation);
 	void UpdateDestinationMarker();
+	void UpdateBlinkers();
 
 	void BeginTeleport();
 	void FinishTeleport();
