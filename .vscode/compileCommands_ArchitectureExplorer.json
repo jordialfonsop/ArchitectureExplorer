@@ -25,6 +25,16 @@
 		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
 	},
 	{
+		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\HandController.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_ArchitectureExplorer\\ArchitectureExplorer.220.rsp\"",
+		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\HandController.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_ArchitectureExplorer\\ArchitectureExplorer.220.rsp\"",
+		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"
+	},
+	{
 		"file": "G:\\Unreal Projects\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\VRCharacter.cpp",
 		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"G:\\Unreal Projects\\ArchitectureExplorer\\.vscode\\compileCommands_ArchitectureExplorer\\ArchitectureExplorer.220.rsp\"",
 		"directory": "F:\\Unreal Engine\\UE_5.0\\Engine\\Source"

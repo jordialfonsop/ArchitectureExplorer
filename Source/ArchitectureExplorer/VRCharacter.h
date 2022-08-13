@@ -31,12 +31,19 @@ private:
 	void MoveUp(float AxisValue);
 	void MoveRight(float AxisValue);
 
+	void GripLeft();
+	void ReleaseLeft();
+	void GripRight();
+	void ReleaseRight();
+
+	void Climb();
+
 	UPROPERTY()
 	class UCameraComponent* Camera;
 	UPROPERTY()
-	class UMotionControllerComponent* LeftController;
+	class AHandController* LeftController;
 	UPROPERTY()
-	class UMotionControllerComponent* RightController;
+	class AHandController* RightController;
 	UPROPERTY()
 	class USceneComponent* VRRoot;
 
@@ -47,7 +54,9 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	class UMaterialInterface* TeleportMaterial;
 	UPROPERTY()
-	TArray<class UStaticMeshComponent*> TeleportPathMeshPool;
+	TArray<class USplineMeshComponent*> TeleportPathMeshPool;
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AHandController> HandControllerClass;
 
 	UPROPERTY()
 	class UPostProcessComponent* Blinker;
